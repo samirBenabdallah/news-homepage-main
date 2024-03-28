@@ -1,0 +1,142 @@
+@media screen and (max-width: 600px) {
+  header {
+    button {
+      display: flex;
+      margin-right: 20px;
+      margin-left: auto;
+    }
+    ul {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start !important;
+      width: 300px;
+      height: 0%;
+      overflow: hidden;
+      padding-left: 10px;
+      background-color: var(--light-gray);
+      transition: 0.7s;
+      li {
+        font-size: 20px;
+        margin-bottom: 20px;
+        a {
+          color: var(--dark);
+          &:hover {
+            color: var(--dark);
+          }
+        }
+      }
+      li:last-of-type {
+        margin-bottom: 150px;
+      }
+    }
+  }
+  header.open {
+    ul {
+      height: 100%;
+    }
+    button {
+      img:first-child {
+        display: none;
+      }
+      img:last-child {
+        display: block;
+      }
+    }
+  }
+}
+@media screen and (max-width: 999px) and (min-width: 600px) {
+  #main {
+    width: 97%;
+  }
+}
+@media screen and (max-width: 920px) {
+  body {
+    height: min-content;
+    padding: 5px;
+  }
+  #main {
+    width: 100%;
+  }
+  header {
+    padding-inline: 15px;
+  }
+  main {
+    display: block;
+    width: 390px;
+    margin-inline: auto;
+    height: min-content;
+    section {
+      width: 100%;
+      margin-bottom: 20px;
+      .img {
+        height: 250px;
+        background-image: url("../assets/images/image-web-3-mobile.jpg");
+      }
+      .text {
+        display: block;
+        h1 {
+          width: 100%;
+          font-size: 3rem;
+        }
+        article {
+          width: 100%;
+          p {
+            font-size: 18px;
+          }
+          button {
+            margin-top: 10px;
+            &:hover {
+              background-color: var(--red);
+            }
+          }
+        }
+      }
+    }
+    aside {
+      width: 100%;
+      div {
+        h2 {
+          font-size: 1.5rem;
+          &:hover {
+            color: var(--light-gray);
+          }
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  footer {
+    margin-inline: auto;
+    display: block;
+    width: 390px;
+    > div {
+      margin-bottom: 30px;
+      width: 100%;
+      height: max-content;
+      img {
+        height: 190px;
+      }
+      div {
+        p:first-child {
+          font-size: 3.5rem;
+        }
+        p:nth-child(2) {
+          margin-block: 20px;
+          font-size: 18px;
+          &:hover {
+            color: var(--dark);
+          }
+        }
+        p:last-child {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
